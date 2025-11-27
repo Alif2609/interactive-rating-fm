@@ -8,8 +8,10 @@ ratingBtn.forEach((btn) => {
   btn.addEventListener("click", function () {
     ratingBtn.forEach((btn) => {
       btn.classList.remove("active");
+      btn.setAttribute("aria-checked","false");
     });
     btn.classList.add("active");
+    btn.setAttribute("aria-checked","true");
   });
 });
 
@@ -25,3 +27,4 @@ submitBtn.addEventListener("click", function () {
     return;
   }
 });
+
